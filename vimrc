@@ -11,8 +11,8 @@ Plugin 'scrooloose/nerdtree'			" Tree-like file display for vim
 Plugin 'jistr/vim-nerdtree-tabs'		" Tabs for NERDTree
 Plugin 'kien/ctrlp.vim'					" Search for anything with ctp + p
 Plugin 'tpope/vim-fugitive'				" Git integration
-Plugin 'vim-airline/vim-airline'		" Display useful stuff near the bottom of the editor
-Plugin 'a.vim'							" Switch between C header/source files with :A
+Plugin 'vim-airline/vim-airline'		" Display useful stuff near the bottom
+Plugin 'a.vim'							" Switch between C header/source files 
 Plugin 'scrooloose/nerdcommenter'		" Comment out code with <leader>cc
 Plugin 'vim-scripts/indentpython.vim'	" Better python indentations plugin
 Plugin 'tmhedberg/SimpylFold'			" Code folding plugin
@@ -33,6 +33,13 @@ set hlsearch				" Highlight words while searching
 hi Search cterm=NONE ctermfg=black ctermbg=cyan	
 set incsearch				" Jump to words as you type them in a search
 let python_highlight_all=1
+
+" -------- Paint a vertical line at 80 characters --------
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
 
 " -------- Split-pane navigation using ctl + h/j/k/l --------
 nnoremap <C-J> <C-W><C-J>
@@ -76,7 +83,7 @@ nnoremap <leader>r :NERDTreeFind<CR>
 let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 0
-" Align line-wise comment delimiters flush left instead of following code indentation
+" Align line-wise comment delimiters flush left 
 let g:NERDDefaultAlign = 'left'
 " C delimiters by default
 let g:NERDAltDelims_c = 1
