@@ -16,6 +16,7 @@ Plugin 'a.vim'							" Switch between C header/source files
 Plugin 'scrooloose/nerdcommenter'		" Comment out code with <leader>cc
 Plugin 'vim-scripts/indentpython.vim'	" Better python indentations plugin
 Plugin 'tmhedberg/SimpylFold'			" Code folding plugin
+Plugin 'tpope/vim-dispatch'				" Run makefile tasks in the background
 " -------- </VundlePlugins> -------- 
 
 call vundle#end()
@@ -33,6 +34,8 @@ set hlsearch				" Highlight words while searching
 hi Search cterm=NONE ctermfg=black ctermbg=cyan	
 set incsearch				" Jump to words as you type them in a search
 let python_highlight_all=1
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
 
 " -------- Paint a vertical line at 80 characters --------
 if exists('+colorcolumn')
@@ -91,4 +94,7 @@ let g:NERDAltDelims_c = 1
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
+
+" -------- Async.vim settings --------
+nnoremap <leader>m :Make!<CR>
 

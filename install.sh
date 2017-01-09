@@ -6,6 +6,8 @@
 VUNDLE_REPO_URL=https://github.com/gmarik/Vundle.vim.git
 VUNDLE_INSTALL_DIR=~/.vim/bundle/Vundle.vim
 MONOKAI_INSTALL_DIR=~/.vim/colors
+CSCOPE_MAPS_DIR=~/.vim/bundle/cscope.vim/plugin/ 
+CSCOPE_MAPS_URL=http://cscope.sourceforge.net/cscope_maps.vim
 
 # Supports Ubuntu, Fedora, and OSX
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
@@ -45,3 +47,5 @@ cp monokai.vim $MONOKAI_INSTALL_DIR
 # Install Vundle Plugins from .vimrc
 vim +PluginInstall +qall
 
+# Download the cscope_maps file
+cd $CSCOPE_MAPS_DIR & wget $CSCOPE_MAPS_URL
