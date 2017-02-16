@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdcommenter'		" Comment out code with <leader>cc
 Plugin 'vim-scripts/indentpython.vim'	" Better python indentations plugin
 Plugin 'tmhedberg/SimpylFold'			" Code folding plugin
 Plugin 'tpope/vim-dispatch'				" Run makefile tasks in the background
+Plugin 'terryma/vim-multiple-cursors'	" Ctl+n for SublimeText-like multicursor
 " -------- </VundlePlugins> -------- 
 
 call vundle#end()
