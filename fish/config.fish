@@ -27,3 +27,7 @@ set fish_pager_color_completion 75715E
 set fish_pager_color_description 49483E
 set fish_pager_color_prefix F8F8F2
 set fish_pager_color_progress F8F8F2
+
+alias ls "colorls"
+alias tree "colorls --tree"
+alias top "htop"

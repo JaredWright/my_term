@@ -6,10 +6,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " -------- <VundlePlugins> --------
-Plugin 'cscope.vim'                     " Goto symbols/definitions
 Plugin 'scrooloose/nerdtree'            " Tree-like file display for vim
 Plugin 'jistr/vim-nerdtree-tabs'        " Tabs for NERDTree
-Plugin 'kien/ctrlp.vim'                 " Search for anything with ctp + p
 Plugin 'tpope/vim-fugitive'             " Git integration
 Plugin 'vim-airline/vim-airline'        " Display useful stuff near the bottom
 Plugin 'a.vim'                          " Switch between C header/source files
@@ -19,6 +17,7 @@ Plugin 'tmhedberg/SimpylFold'           " Code folding plugin
 Plugin 'tpope/vim-dispatch'             " Run makefile tasks in the background
 Plugin 'terryma/vim-multiple-cursors'   " Ctl+n for SublimeText-like multicursor
 Plugin 'kshenoy/vim-signature'          " Display buffer marks by line numbers
+Plugin 'ryanoasis/vim-devicons'         " Cool icons for NERDTree, etc
 " -------- </VundlePlugins> --------
 
 call vundle#end()
