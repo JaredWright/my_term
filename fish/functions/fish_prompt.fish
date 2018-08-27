@@ -18,13 +18,12 @@ function fish_prompt
   set -l normal (set_color normal)
 
   if test $last_status = 0
-      set arrow (printf "\xf0\x9f\x90\x9f ")
+      set arrow $fish
   else
-      set arrow (printf "\xe2\x98\xa0 ")
+      set arrow $skull
   end
-  set -l cwd $cyan(prompt_pwd)
 
-  echo -n -s $normal $arrow $normal ' '
+  echo -n -s $apple " " $normal $arrow " " $normal ' '
 end
 
 function fish_right_prompt
@@ -52,5 +51,6 @@ function fish_right_prompt
     end
   end
 
+  # echo -n -s $apple " " $cwd $git_info
   echo -n -s $cwd $git_info
 end

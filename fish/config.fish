@@ -28,6 +28,39 @@ set fish_pager_color_description 49483E
 set fish_pager_color_prefix F8F8F2
 set fish_pager_color_progress F8F8F2
 
+# Aliases
 alias ls "colorls"
 alias tree "colorls --tree"
 alias top "htop"
+
+# Glyphs
+# To figure out the right encoding for a unicode character, in a terminal run:
+# printf <copy_paste_the_glyph_here> | hexdump
+set -g apple ""
+set -g linux ""
+set -g windows ""
+set -g bsd ""
+set -g arch ""
+set -g ubuntu ""
+set -g debian ""
+set -g raspbian ""
+set -g redhat ""
+set -g fedora ""
+set -g opensuse ""
+set -g docker ""
+set -g github ""
+set -g git ""
+set -g gitlab ""
+set -g android ""
+set -g ios ""
+
+set -g fish "🐟"
+set -g skull "☠"
+set -g thumbsup ""
+set -g thumbsdown ""
+set -g usb ""
+set -g stackoverflow ""
+set -g home ""
+set -g power ""
+set -g vim ""
+set -g fingerprint ""
