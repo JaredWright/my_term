@@ -10,7 +10,6 @@ Plugin 'scrooloose/nerdtree'            " Tree-like file display for vim
 Plugin 'jistr/vim-nerdtree-tabs'        " Tabs for NERDTree
 Plugin 'tpope/vim-fugitive'             " Git integration
 Plugin 'vim-airline/vim-airline'        " Display useful stuff near the bottom
-Plugin 'a.vim'                          " Switch between C header/source files
 Plugin 'scrooloose/nerdcommenter'       " Comment out code with <leader>cc
 Plugin 'vim-scripts/indentpython.vim'   " Better python indentations plugin
 Plugin 'tmhedberg/SimpylFold'           " Code folding plugin
@@ -42,6 +41,12 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap ; `
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+" -------- On MacOs, leader + y in visual mode to copy to clipboard --------
+vnoremap <leader>y :w !pbcopy<CR><CR>
+
+" -------- No delay for escape while in visual mode --------
+set timeoutlen=1000 ttimeoutlen=0
 
 " -------- Paint a vertical line at 80 characters --------
 if exists('+colorcolumn')
